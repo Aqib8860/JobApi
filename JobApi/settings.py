@@ -56,10 +56,11 @@ INSTALLED_APPS = [
 
     'core',
     'job',
+    'frontend',
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    #'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -139,7 +140,8 @@ X_FRAME_OPTIONS='SAMEORIGIN'
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_venv')]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -155,7 +157,7 @@ AUTHENTICATION_BACKENDS = (
  # `allauth` specific authentication methods, such as login by e-mail
  "allauth.account.auth_backends.AuthenticationBackend",
 )
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 """EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
 EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
 DEFAULT_FROM_EMAIL = 'noreply@srms.com'"""

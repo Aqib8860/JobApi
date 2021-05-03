@@ -1,0 +1,128 @@
+{% extends 'job/main.html' %}
+{% load static %}
+{% block title %}AI JOBS{% endblock %}
+
+{% block content %}
+<br>
+
+
+
+<div class="jumbotron" style="background: rgb(222,220,11);background: linear-gradient(90deg, rgba(222,220,11,1) 0%, rgba(128,228,85,1) 50%, rgba(245,137,154,1) 100%);">
+	
+	<h1 style="color: #2F4F4F;text-align: center;">Welcome To AI Jobs</h1>      
+	<p style="color: #2F4F4F;text-align: center;">Start your carrer with most trusted site.</p>
+</div>
+
+
+<br>
+
+<div class="container">
+
+	{% for job in jobdata %}
+	<div class="card">
+  		<div class="card-header">
+    		Date: {{ job.date}}
+  		</div>
+  		<div class="card-body">
+  			
+    		<h5 class="card-title">{{ job.job_title }}</h5>
+    		<a href="" style="color:black">
+    		<h6>Location : {{ job.location }}</h6>
+    		<h6>Salary : {{ job.salary_from }} To {{ job.salary_to }}</h6>
+    		<h6>Exp : {{ job.experience }}</h6>
+
+    		<p class="card-text">Requirements : {{ job.requirements}}</p>
+    		<br>
+    		<a href="#" class="btn btn-primary">View Job</a>
+    		<a href="#" class="btn btn-primary">Apply Job</a>
+    		</a>
+  		</div>
+	</div>
+	<br>
+	{% endfor %}
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4" style="background: rgb(222,220,11);background: linear-gradient(90deg, rgba(222,220,11,1) 0%, rgba(128,228,85,1) 50%, rgba(245,137,154,1) 100%);">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">AI JOBS</h5>
+        <p>Some usefull links of our.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="https://mdbootstrap.com/"> AIWORLD</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+{% endblock %}

@@ -26,5 +26,5 @@ urlpatterns = [
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('api/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
     path('job/', include('job.urls'), name='job'),
-
+    path('job-app/', include('frontend.urls'), name='jobfrontend'),
 ]
