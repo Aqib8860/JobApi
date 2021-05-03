@@ -1,1 +1,1 @@
-web: gunicorn nischay_herbal.wsgi
+web: gunicorn JobApi.wsgi
